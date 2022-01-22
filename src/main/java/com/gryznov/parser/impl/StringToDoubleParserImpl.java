@@ -9,14 +9,7 @@ import java.util.List;
 public class StringToDoubleParserImpl implements StringToDoubleParser {
     @Override
     public List<Double> parseAll(List<String> strList) throws ParserException {
-        List<Double> doubleList = new ArrayList<Double>();
 
-        boolean isUncorrectData = false;
-
-        if (!strList.isEmpty()) {
-            for (String currentLine : strList) {
-            }
-        }
-        return new ArrayList<>();
+        return null;
     }
 }
