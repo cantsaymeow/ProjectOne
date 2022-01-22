@@ -2,12 +2,14 @@ package com.gryznov.reader.impl;
 
 import com.gryznov.exception.ReaderExeption;
 import com.gryznov.reader.ReaderFromFile;
-
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ReaderFromFileImpl implements ReaderFromFile {
+    static Logger logger = LogManager.getLogger();
     @Override
     public List<String> readFile(String pathToFile) throws ReaderExeption {
         List<String> fileNumbers = new ArrayList<String>();
@@ -18,9 +20,9 @@ public class ReaderFromFileImpl implements ReaderFromFile {
                 fileNumbers.add(currentLine);
             }
         } catch(FileNotFoundException e){
-            throw new ReaderExeption("File " + pathToFile + "wasn't found");
+            logger.error("FileNotFoundException",e);
         } catch (IOException e){
-            throw new ReaderExeption("IO exception while reading this file");
+            logger.error("IOException",e);
         }
         return fileNumbers;
     }

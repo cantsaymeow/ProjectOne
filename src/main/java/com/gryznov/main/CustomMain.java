@@ -1,8 +1,8 @@
 package com.gryznov.main;
+
 import com.gryznov.exception.ReaderExeption;
 import com.gryznov.reader.ReaderFromFile;
 import com.gryznov.reader.impl.ReaderFromFileImpl;
-
 import java.util.List;
 
 public class CustomMain {
