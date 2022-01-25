@@ -15,29 +15,28 @@ public class ServiceMethods implements NumberService {
         try {
             maxValue = intArr[0];
             for (double temp : intArr) {
-                if (temp > maxValue){
+                if (temp > maxValue) {
                     maxValue = temp;
                 }
             }
-        }
-        catch(ArrayIndexOutOfBoundsException e){
+        } catch (ArrayIndexOutOfBoundsException e) {
             logger.error(ARRAY_INDEX_OUT_OF_BOUNDS_EXCEPTION);
         }
 
         return maxValue;
     }
+
     @Override
     public double findMin(double[] intArr) throws ArrayIndexOutOfBoundsException {
         double minValue = 0;
         try {
             minValue = intArr[0];
             for (double temp : intArr) {
-                if (temp < minValue){
+                if (temp < minValue) {
                     minValue = temp;
                 }
             }
-        }
-        catch(ArrayIndexOutOfBoundsException e){
+        } catch (ArrayIndexOutOfBoundsException e) {
             logger.error(ARRAY_INDEX_OUT_OF_BOUNDS_EXCEPTION);
         }
 
@@ -56,7 +55,7 @@ public class ServiceMethods implements NumberService {
     @Override
     public double sum(double[] intArr) {
         double sum = 0;
-        for(double temp:intArr){
+        for (double temp : intArr) {
             sum += temp;
         }
         return sum;
@@ -65,8 +64,8 @@ public class ServiceMethods implements NumberService {
     @Override
     public double numberPos(double[] intArr) {
         double pos = 0;
-        for(double temp:intArr){
-            if(temp>0){
+        for (double temp : intArr) {
+            if (temp > 0) {
                 pos += 1;
             }
         }
@@ -76,8 +75,8 @@ public class ServiceMethods implements NumberService {
     @Override
     public double numberNeg(double[] intArr) {
         double neg = 0;
-        for(double temp:intArr){
-            if(temp<0){
+        for (double temp : intArr) {
+            if (temp < 0) {
                 neg += 1;
             }
         }

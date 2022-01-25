@@ -12,15 +12,15 @@ import java.util.List;
 public class StringToDoubleParserImpl implements StringToDoubleParser {
     public static final String NUMBER_FORMAT_EXCEPTION = "NumberFormatException";
     static Logger logger = LogManager.getLogger();
+
     @Override
     public List<Double> parseAll(List<String> strList) throws ParserException {
         List<Double> doubleList = new ArrayList<>();
         for (int i = 0; i < strList.size(); i++) {
-            try{
+            try {
                 doubleList.add(Double.parseDouble(strList.get(i)));
-            }
-            catch(NumberFormatException e){
-                logger.error(NUMBER_FORMAT_EXCEPTION);
+            } catch (NumberFormatException e) {
+                logger.error(NUMBER_FORMAT_EXCEPTION + " " + strList.get(i));
             }
         }
         return doubleList;

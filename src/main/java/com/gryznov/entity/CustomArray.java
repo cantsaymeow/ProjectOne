@@ -3,11 +3,11 @@ package com.gryznov.entity;
 public class CustomArray {
     private double[] initialArr;
 
-    public CustomArray(int size){
+    public CustomArray(int size) {
         initialArr = new double[size];
     }
 
-    public CustomArray(double[] initialArr){
+    public CustomArray(double[] initialArr) {
         this.initialArr = initialArr;
     }
 
