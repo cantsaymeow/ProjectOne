@@ -11,6 +11,10 @@ public class CustomArray {
         this.initialArr = initialArr;
     }
 
+    public double[] CustomArray() {
+        return initialArr;
+    }
+
     public double[] getInitialArr() {
         return initialArr;
     }

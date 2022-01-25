@@ -1,6 +1,6 @@
 package com.gryznov.reader.impl;
 
-import com.gryznov.exception.ReaderExeption;
+import com.gryznov.exception.ReaderException;
 import com.gryznov.reader.ReaderFromFile;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
@@ -9,9 +9,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ReaderFromFileImpl implements ReaderFromFile {
+    public static final String FILE_NOT_FOUND_EXCEPTION = "FileNotFoundException";
+    public static final String IO_EXCEPTION = "IOException";
     static Logger logger = LogManager.getLogger();
     @Override
-    public List<String> readFile(String pathToFile) throws ReaderExeption {
+    public List<String> readFile(String pathToFile) {
         List<String> fileNumbers = new ArrayList<String>();
 
         try (BufferedReader reader = new BufferedReader(new FileReader(pathToFile))){
@@ -20,9 +22,9 @@ public class ReaderFromFileImpl implements ReaderFromFile {
                 fileNumbers.add(currentLine);
             }
         } catch(FileNotFoundException e){
-            logger.error("FileNotFoundException",e);
+            logger.error(FILE_NOT_FOUND_EXCEPTION,e);
         } catch (IOException e){
-            logger.error("IOException",e);
+            logger.error(IO_EXCEPTION,e);
         }
         return fileNumbers;
     }

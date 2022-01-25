@@ -4,20 +4,21 @@ import com.gryznov.reader.ReaderFromFile;
 
 import java.lang.reflect.Executable;
 
-public class ReaderExeption extends Exception {
-    public ReaderExeption(){
+public class ReaderException extends Exception {
+    public ReaderException(){
         super();
     }
 
-    public ReaderExeption(String message){
+    public ReaderException(String message){
         super(message);
     }
 
-    public ReaderExeption(Exception e){
+    public ReaderException(Exception e){
         super(e);
     }
 
-    public ReaderExeption(String message, Exception e){
+    public ReaderException(String message, Exception e){
         super(message,e);
+
     }
 }

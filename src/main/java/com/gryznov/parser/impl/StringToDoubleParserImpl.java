@@ -10,20 +10,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class StringToDoubleParserImpl implements StringToDoubleParser {
+    public static final String NUMBER_FORMAT_EXCEPTION = "NumberFormatException";
     static Logger logger = LogManager.getLogger();
     @Override
     public List<Double> parseAll(List<String> strList) throws ParserException {
-        List<Double> doubleList = new ArrayList<Double>();
-        boolean isUncorrectData = false;
-
-        if(!strList.isEmpty()){
-            for(String currentLine : strList){
-                if(StringValidator.validate(currentLine)){
-                    Double temp = Double.valueOf(currentLine);
-                    doubleList.add(temp);
-                }else{
-                    isUncorrectData = true;
-                }
+        List<Double> doubleList = new ArrayList<>();
+        for (int i = 0; i < strList.size(); i++) {
+            try{
+                doubleList.add(Double.parseDouble(strList.get(i)));
+            }
+            catch(NumberFormatException e){
+                logger.error(NUMBER_FORMAT_EXCEPTION);
             }
         }
         return doubleList;
