@@ -1,0 +1,29 @@
+2022-01-23 00:30:30 [main] ERROR com.gryznov.reader.impl.ReaderFromFileImpl - FileNotFoundException
+java.io.FileNotFoundException: resources\inititialnumbers\numbers (Системе не удается найти указанный путь)
+	at java.io.FileInputStream.open0(Native Method) ~[?:?]
+	at java.io.FileInputStream.open(FileInputStream.java:216) ~[?:?]
+	at java.io.FileInputStream.<init>(FileInputStream.java:157) ~[?:?]
+	at java.io.FileInputStream.<init>(FileInputStream.java:111) ~[?:?]
+	at java.io.FileReader.<init>(FileReader.java:60) ~[?:?]
+	at com.gryznov.reader.impl.ReaderFromFileImpl.readFile(ReaderFromFileImpl.java:17) [classes/:?]
+	at com.gryznov.main.CustomMain.main(CustomMain.java:11) [classes/:?]
+2022-01-25 16:00:05 [main] INFO  com.gryznov.main.CustomMain - [1 2 3    4]
+2022-01-25 16:18:43 [main] INFO  com.gryznov.main.CustomMain - [1 2 3    4]
+2022-01-25 16:18:43 [main] INFO  com.gryznov.main.CustomMain - []
+2022-01-25 16:19:24 [main] INFO  com.gryznov.main.CustomMain - [1 2. 3    4]
+2022-01-25 16:19:24 [main] INFO  com.gryznov.main.CustomMain - []
+2022-01-25 16:28:23 [main] INFO  com.gryznov.main.CustomMain - [1 2. 3    4]
+2022-01-25 16:28:23 [main] ERROR com.gryznov.parser.impl.StringToDoubleParserImpl - NumberFormatException
+2022-01-25 16:28:23 [main] INFO  com.gryznov.main.CustomMain - []
+2022-01-25 16:29:34 [main] INFO  com.gryznov.main.CustomMain - [1 ]
+2022-01-25 16:29:34 [main] INFO  com.gryznov.main.CustomMain - [1.0]
+2022-01-25 16:39:00 [main] INFO  com.gryznov.main.CustomMain - [1]
+2022-01-25 16:39:00 [main] INFO  com.gryznov.main.CustomMain - [1.0]
+2022-01-25 16:39:09 [main] INFO  com.gryznov.main.CustomMain - [1, 2, 3, 4]
+2022-01-25 16:39:09 [main] INFO  com.gryznov.main.CustomMain - [1.0, 2.0, 3.0, 4.0]
+2022-01-25 16:39:19 [main] INFO  com.gryznov.main.CustomMain - [1, 2, 3, 4b]
+2022-01-25 16:39:19 [main] ERROR com.gryznov.parser.impl.StringToDoubleParserImpl - NumberFormatException
+2022-01-25 16:39:19 [main] INFO  com.gryznov.main.CustomMain - [1.0, 2.0, 3.0]
+2022-01-25 16:40:24 [main] INFO  com.gryznov.main.CustomMain - [1, 2, 3, 4b]
+2022-01-25 16:40:24 [main] ERROR com.gryznov.parser.impl.StringToDoubleParserImpl - NumberFormatException 4b
+2022-01-25 16:40:24 [main] INFO  com.gryznov.main.CustomMain - [1.0, 2.0, 3.0]
